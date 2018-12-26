@@ -1,0 +1,395 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jewel Barman</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lucida-Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+body,a,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+    scroll-behavior: smooth;
+}
+
+.w3-tangerine {
+    font-family: "Tangerine", serif;
+}
+
+.w3-lobster {
+    font-family: "Lobster", serif;
+}
+
+.w3-times{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+}
+
+/*Scroll Bar*/
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: grey; 
+    border-radius: 10px;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url('images/wallhaven-323420.png');
+    min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url("images/A0pcAS3.jpg");
+    min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("images/3993274.jpg");
+    min-height: 400px;
+}
+
+/* Fourth image (Contact) */
+.bgimg-4 {
+    background-image: url("images/JcizfqO.png");
+    min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+div.polaroid {
+    width: 284px;
+    padding: 10px 10px 20px 10px;
+    border: 1px solid #BFBFBF;
+    background-color: white;
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+div.rotate_right {
+    float: left;
+    -ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Safari */
+    transform: rotate(7deg);
+}
+
+div.rotate_left {
+    float: left;
+    -ms-transform: rotate(-8deg); /* IE 9 */
+    -webkit-transform: rotate(-8deg); /* Safari */
+    transform: rotate(-8deg);
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+</style>
+<body style="background-color: black">
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" style="color: white" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+    <a href="#blogs" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-newspaper-o"></i> BLOGS</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+    <a href="#" class="w3-right w3-xxlarge w3-tangerine" style="text-decoration: none;padding-right:50px"><b>Jewel</b></a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container" id="home">
+  <div class="w3-display-middle w3-opacity-min" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-jumbo w3-animate-opacity w3-tangerine">Jewel Barman</span>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-times w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">ABOUT ME</h3>
+  <p class="w3-center"><em>Linux Enthusiast, Developer.</em></p>
+  <p>A Computer Science Undergraduate from NIT Allahabad(MNNIT), India. Pretty much loves solving real life problems. Part-time blogging and reading articles. Reading Manga and watching Anime part of hobby. Always loved playing Football, big Fan of Chelsea, although knows nothing about it.<br><br>Areas of Interest: Penetration Testing, Malware Analysis.</p>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <p><b><i class="fa fa-user w3-margin-right"></i>Jewel Barman</b></p><br>
+      <img src="images/dp.jpg" class="w3-card w3-circle w3-image w3-hover-grayscale" alt="Photo of Me" width="200" height="100">
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+      <p>Welcome to my website, I hope you find it attractive and gloomy. And I hope you find what you are looking for!<br><br>There isn't much in it right now, I'll keep it updating further. Cheers!</p>
+    </div>
+  </div>
+  <div class="w3-lobster">
+  <p class="w3-large w3-center w3-padding-16">I'm really good at:</p>
+  <p class="w3-wide"><i class="fa fa-linux"></i>Linux</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-red w3-center" style="width:90%">90%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-laptop"></i>Web Design</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-red w3-center" style="width:85%">85%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-bomb"></i>Metasploit</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-red w3-center" style="width:65%">65%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-paint-brush"></i>Sketching</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-red w3-center" style="width:75%">75%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-music"></i>Guitar</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-red w3-center" style="width:80%">80%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-photo"></i>Photoshop</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-red w3-center" style="width:50%">50%</div>
+  </div>
+</div>
+</div>
+<div class="w3-center w3-white w3-padding-16">
+  <button onclick="https://github.com/Jewel998" class="w3-button w3-round w3-hover-text-white w3-hover-red" style="margin-top:64px;color:red;border:1px solid red">My Github Profile</button>
+</div>
+
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64" id="portfolio">
+  <h3 class="w3-center">MY GALLERY</h3>
+  <p class="w3-center"><em>Here are some of my latest sketches and pictures.<br> Click on the images to make them bigger</em></p><br>
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="images/sketch1.jpg" style="width:150px;height:150px" onclick="onClick(this)" class="w3-hover-opacity w3-circle" alt="The mist over the mountains">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="images/sketch2.jpg" style="width:150px;height:150px" onclick="onClick(this)" class="w3-hover-opacity w3-circle" alt="Coffee beans">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="images/sketch3.jpg" style="width:150px;height:150px" onclick="onClick(this)" class="w3-hover-opacity w3-circle" alt="Bear closeup">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="images/sketch4.jpg" style="width:150px;height:150px" onclick="onClick(this)" class="w3-hover-opacity w3-circle" alt="Quiet ocean">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-center w3-section">
+    <div class="w3-col m3">
+      <img src="images/sketch5.jpg" style="width:150px;height:150px" onclick="onClick(this)" class="w3-hover-opacity w3-circle" alt="The mist">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="images/sketch6.jpg" style="width:150px;height:150px" onclick="onClick(this)" class="w3-hover-opacity w3-circle" alt="My beloved typewriter">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="images/sketch7.jpg" style="width:150px;height:150px" onclick="onClick(this)" class="w3-hover-opacity w3-circle" alt="Empty ghost train">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="images/sketch8.jpg" style="width:150px;height:150px" onclick="onClick(this)" class="w3-hover-opacity w3-circle" alt="Sailing">
+    </div>
+    <button class="w3-button w3-padding-large w3-hover-text-white w3-hover-red" style="margin-top:64px;color:red;border:1px solid red">LOAD MORE</button>
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Third Parallax Image with BLOGS Text -->
+<div class="bgimg-3 w3-display-container">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide w3-center">BLOGS</span>
+  </div>
+</div>
+
+<div class="w3-center w3-content w3-container w3-padding-64" id="blogs">
+  <p class="w3-center w3-xlarge"> MY BLOGS</p>
+  <div>
+    <span><em>Just a part-time thingy.</em></span><br><br><br>
+    <div class="w3-row-padding w3-center">
+        <div class="w3-col m4">
+            <div class="w3-container">              
+                <div class="w3-round w3-card w3-orange" style="width:100%;padding: 5px">
+                  <img src="images/11.jpg" alt="APT-Debian" style="width:100%;height:150px">
+                  <div class="w3-container w3-center">
+                      <a href="https://apt-debian.quora.com/" style="text-decoration:none">APT-Debian</a>
+                  </div>
+                </div>
+              </div>
+          </div>
+    
+        <div class="w3-col m4">
+            <div class="w3-container">              
+                <div class="w3-round w3-card w3-blue" style="width:100%;padding: 5px">
+                  <img src="images/1.png" alt="XSS-Hunting" style="width:100%;height:150px">
+                  <div class="w3-container w3-center">
+                    <a href="https://crosssitescript.quora.com/" style="text-decoration:none">XSS-Hunting</a>
+                  </div>
+                </div>
+              </div>
+        </div>
+    
+        <div class="w3-col m4">
+            <div class="w3-container">              
+                <div class="w3-round w3-card w3-white" style="width:100%;padding: 5px">
+                  <img src="images/3.png" alt="Wireless Hacking - Aircrack-ng" style="width:100%;height:150px">
+                  <div class="w3-container w3-center">
+                    <a href="https://aircracktutorials.quora.com/" style="text-decoration:none">Wireless Hacking - Aircrack-ng</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>
+
+  </div>
+</div>
+
+<!-- Fourth Parallax Image with Portfolio Text -->
+<div class="bgimg-4 w3-display-container">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  <h3 class="w3-center">WHERE I WORK</h3>
+  <p class="w3-center"><em>I'd love your feedback!</em></p>
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      <img src="images/map.jpg" onclick="onClick(this)" width="100%" alt="Allahabad Location">
+    </div>
+    <div class="w3-col m4 w3-container">
+    </div>
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Allahabad, Uttar Pradesh<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +91 7432983153<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: jewelbarman998@gmail.com<br>
+      </div>
+      <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+      <form method=POST action="mailto:jewelbarman998@gmail.com" enctype="text/plain">
+        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+        <button class="w3-button w3-black w3-round w3-right w3-section w3-hover-red w3-hover-text-white" style="border:1px solid red" type="submit">
+          <div class="w3-hover-text-white" style="color: red"><i class="fa fa-paper-plane"></i> SEND MESSAGE</div>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-blue w3-padding-64">
+  <a href="#home"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <a href="https://www.facebook.com/jewel.barman"><i class="fa fa-facebook-official w3-hover-opacity" style="color:yellow"></i></a>&nbsp &nbsp
+    <a href="https://www.instagram.com/_the_random_shit_/"><i class="fa fa-instagram w3-hover-opacity" style="color:yellow"></i></a>&nbsp &nbsp
+    <a href="https://www.quora.com/profile/Jewel-Barman-3"><i class="fa fa-quora w3-hover-opacity" style="color:yellow"></i></a>&nbsp &nbsp
+    <a href=""><i class="fa fa-pinterest-p w3-hover-opacity" style="color:yellow"></i></a>&nbsp &nbsp
+    <a href="https://www.twitter.com/JewelBrmn"><i class="fa fa-twitter w3-hover-opacity" style="color:yellow"></i></a>&nbsp &nbsp
+    <a href="https://www.linkedin.com/in/jewel998/"><i class="fa fa-linkedin w3-hover-opacity" style="color:yellow"></i></a>
+  </div>
+  <p>Hosted on <a href="https://github.io" title="W3.CSS" target="_blank" class="w3-hover-text-green">Github.</a></p>
+</footer>
+ 
+<!-- Add Google Maps -->
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-opacity" + "w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
